@@ -1,0 +1,11 @@
+version: '3'
+services:
+  web:
+    container_name: "toasted_den_website"
+    image: nginx:alpine
+    volumes:
+      - ./website:/usr/share/nginx/html
+    ports:
+      - "8095:80"
+    restart: always
+
