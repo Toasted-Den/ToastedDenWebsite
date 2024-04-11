@@ -78,3 +78,27 @@ h1 + .smaller-text {
         transform: rotate(720deg);
     }
 }
+
+/* Style for the footer */
+.footer {
+    font-family: Arial, sans-serif; /* Specify the desired font family */
+    font-size: 15px; /* Set the font size */
+    background-color: #0c0b0b; /* Dark gray background for the footer */
+    color: white; /* White text color for the footer */
+    padding: 20px 0; /* Add padding to the top and bottom of the footer */
+    text-align: center; /* Center align text */
+    position: fixed; /* Fixed positioning */
+    bottom: 0; /* Align to the bottom of the viewport */
+    width: 100%; /* Full width */
+}
+
+/* Style for the links within the footer */
+.footer a {
+    color: #917b55; /* White color for links */
+    text-decoration: none; /* Remove underline from links */
+    margin: 0 10px; /* Add margin to separate links */
+}
+
+.footer a:hover {
+    text-decoration: underline; /* Add underline on hover */
+}
