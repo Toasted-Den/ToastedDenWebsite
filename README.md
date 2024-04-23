@@ -15,7 +15,11 @@ To run the website with Docker Compose:
 1. Install Docker and Docker Compose with `sudo apt install docker.io docker-compose`.
 2. Clone this repository to your local machine using `git clone https://github.com/Toasted-Den/ToastedDenWebsite.git`
 3. Navigate to the project directory using `cd`.
-4. Run `sudo docker-compose up -d` to start the container. You can now navigate to `localhost:8095` to view the site.
+4. Run `sudo docker-compose up -d` to start the container. You can now navigate to [localhost:8095](http://localhost:8095) to view the site.
+
+Remember to add a firewall rule for the ports you will be using to host the site. In my case I use ports `80` and `8095`. Add your firewall rule(s) by running `sudo ufw allow 80`, `sudo ufw allow 8095`, and `sudo ufw enable` in the terminal on Debian based operating systems.
+
+Ensure the firewall is active and allowing the ports through by running `sudo ufw status` in the terminal.
 
 ## The Live Website
 
