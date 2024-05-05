@@ -1,6 +1,6 @@
 # Toasted Den's Website
 
-This is the official repository for the Toasted Den website. The website provides contact information for Toasted Den, including business inquiries and direct contact details.
+This is the official repository for the [Toasted Den website](https://toastedden.com). The website provides contact information for Toasted Den, including business inquiries and direct contact details.
 
 ## Setup
 
@@ -21,9 +21,8 @@ Remember to add a firewall rule for the ports you will be using to host the site
 
 Ensure the firewall is active and allowing the ports through by running `sudo ufw status` in the terminal.
 
-## The Live Website
-
-[toastedden.com](https://toastedden.com)
+## Special Events
+On occasion, the website will have a minor update for special events. You can view all previous special event versions of the site by navigating to the `./SpecialEvents` directory.
 
 ## Committing
 I don't think there's much to improve on, but if you think you can enhance/ optimize the site; feel free to make a pull request!
