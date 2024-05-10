@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+    <html>
+        <head>
+            <!-- Title of the website -->
+            <title>Toasted Den</title>
+            <!-- Specify the favicon for the website -->
+            <link rel="icon" type="image/png" href="images/favicon.png">
+            <!-- Link to the external stylesheet -->
+            <link rel="stylesheet" href="styles.css">
+        </head>
+    <body>
+    <!-- Container for the content -->
+    <div class="container">
+        <!-- Container for the logo -->
+        <div class="logo-container">
+            <!-- Add the link to the Toasted's Den Discord server when the logo is clicked -->
+            <a href="https://discord.gg/vWE9vt5j7B" target="_blank" title="">
+                <!-- Image logo with alt text -->
+                <img class="logo" src="images/logo.png" alt="Logo">
+                <!-- Image for the background -->
+                <img class="logo-background" src="images/logoBackground.png" alt="Logo Background">
+                <!-- Additional image for Mr. Robot background -->
+                <img class="logo-background-mrrobot" src="images/logoBackgroundMrRobot.png" alt="Logo Background Mr. Robot">
+            </a>
+        </div>
+        <!-- Main heading -->
+        <h1 id="hello-heading">Hello, friend.</h1>
+        <!-- "Hello friend."? That's lame... -->
+        <!-- Text for business inquiries -->
+        <p class="smaller-text">For business inquiries, please use:</p>
+        <!-- Email address for business inquiries -->
+        <p class="smaller-text" id="business-email"> <a href="mailto:business@toastedden.com">business@toastedden.com</a></p>
+        <!-- Empty paragraph for creating a gap -->
+        <p class="smaller-text" id="gap-text"></p>
+        <!-- Text for non-business purposes and direct contact -->
+        <p class="smaller-text">For non-business purposes and direct contact with me:</p>
+        <!-- Email address for non-business purposes -->
+        <p class="smaller-text" id="contact-email"> <a href="mailto:contact@toastedden.com">contact@toastedden.com</a></p>
+    </div>
+    <!-- Footer section -->
+<!-- Footer section -->
+    <footer class="footer" id="footer-section">
+        <!-- YouTube channel link -->
+        <a href="https://youtube.com/@ToastedDen" target="_blank">YouTube Channel</a>
+        <!-- Discord server link -->
+        <a href="https://discord.gg/vWE9vt5j7B" target="_blank">Discord Server</a>
+        <!-- Second channel link -->
+        <a href="https://youtube.com/@RoastedDen" target="_blank">Second Channel</a>
+        <!-- Twitch link -->
+        <a href="https://www.twitch.tv/toasted_den" target="_blank">Twitch</a>
+        <!-- GitHub link -->
+        <a href="https://github.com/Toasted-Den" target="_blank">GitHub</a>
+    </footer>
+    <!-- JavaScript to play and pause audio when the heading is clicked -->
+    <script>
+    // Initialize audio element with Mr. Roboto audio file
+    var audio = new Audio('audio/Styx - Mr. Roboto.ogg');
+    // Variable to track whether the audio is currently playing
+    var isPlaying = false;
+    // Variable to store timer ID
+    var timer;
+
+    // Event listener for click on the main heading
+    document.getElementById('hello-heading').addEventListener('click', function() {
+        // If audio is currently playing
+        if (isPlaying) {
+            // Pause the audio
+            audio.pause();
+            // Reset audio playback to the beginning
+            audio.currentTime = 0;
+            // Clear the timer interval
+            clearInterval(timer);
+            // Update isPlaying status
+            isPlaying = false;
+            // Reset text color to default for email addresses and footer links
+            document.getElementById('business-email').querySelector('a').style.color = '';
+            document.getElementById('contact-email').querySelector('a').style.color = '';
+            document.querySelectorAll('.footer a').forEach(function(link) {
+                link.style.color = '';
+            });
+            // Switch back to the default background image
+            document.querySelector('.logo-background').style.display = 'block';
+            document.querySelector('.logo-background-mrrobot').style.display = 'none';
+        } else {
+            // Start playing the audio
+            audio.play();
+            // Set isPlaying to true
+            isPlaying = true;
+            // Set a timeout for color change and background image switch
+            timer = setTimeout(function() {
+                // Change text color to the specified color for email addresses and footer links
+                document.getElementById('business-email').querySelector('a').style.color = '#cf2228'; // Hex color
+                document.getElementById('contact-email').querySelector('a').style.color = '#cf2228'; // Hex color
+                document.querySelectorAll('.footer a').forEach(function(link) {
+                    link.style.color = 'rgb(207, 34, 40)'; // RGB color
+                });
+                // Switch to the Mr. Robot background image
+                document.querySelector('.logo-background').style.display = 'none';
+                document.querySelector('.logo-background-mrrobot').style.display = 'block';
+            }, 45430); // Set the timeout duration
+        }
+    });
+    </script>
+    </body>
+</html>
